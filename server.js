@@ -41,7 +41,6 @@ hbs.registerHelper('screamIt', (text) => {
 });
 
 app.get('/', (req, res) => {
-  //res.send('<h1>Hello Express</h1>');
   res.render('home.hbs', {
     pageTitle: 'Home Page',
     welcomeMessage: 'This site the shit, not for shitting.'
