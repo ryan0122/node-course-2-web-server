@@ -53,6 +53,13 @@ app.get('/about', (req,res) => {
   });
 });
 
+app.get('/projects', (req,res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    content: 'Here are my projects'
+  });
+});
+
 app.get('/bad', (req,res) => {
   res.send({
     errorMessage: 'Cant even the request right now'
@@ -60,5 +67,5 @@ app.get('/bad', (req,res) => {
 });
 
 app.listen(port, () => {
-  //console.log(`Server is up on ${port}`);
+  console.log(`Server is up on ${port}`);
 });
